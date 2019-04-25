@@ -4,7 +4,19 @@ using namespace std;
 
 vector<string> split_string(string);
 
+void printLR(const std::vector<int>& oArray, int d)
+{
+    for (int i = d; i < oArray.size(); i++)
+    {
+        std::cout << oArray[i] << " ";
+    }
 
+    for (int i = 0; i < d; i++)
+    {
+        std::cout << oArray[i] << " ";
+    }
+    std::cout << "\n";
+}
 
 int main()
 {
@@ -29,6 +41,7 @@ int main()
 
         a[i] = a_item;
     }
+    printLR(a, d);
 
     return 0;
 }
